@@ -1,0 +1,11 @@
+<span class="title">Selecione o tipo da tarefa</span>
+<div class="dropdown-container" (click)="toggleDropdown()">
+    <span class="text-container">{{ selectedOptionText }}</span>
+    <fa-icon class="arrow" [icon]="isOpen ? faChevronUp : faChevronDown"></fa-icon>
+    <div class="dropdown-options" *ngIf="isOpen">
+        <div *ngFor="let option of options" 
+             (click)="selectOption(option.value)">
+             {{ option.label }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<button 
+  [style.backgroundColor]="color" 
+  [style.border]="borderStyle" 
+  [style.color]="textColor"
+  [style.borderRadius]="borderRadius"
+  [disabled]="isLoading">
+  
+  <ng-container *ngIf="icon">
+    <img [src]="icon" alt="icon" class="icon" />
+  </ng-container>
+  
+  <span [class.bold]="isBold">{{ label }}</span>
+  
+  <ng-container *ngIf="isLoading">
+    <span class="spinner"></span>
+  </ng-container>
+  
+</button>

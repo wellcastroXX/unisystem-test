@@ -1,0 +1,24 @@
+* {font-family: 'Manrope', sans-serif; }
+.title{ font-size: 12pt; font-weight: 600; color: #222; margin-left: 4.8%; }
+.dropdown-container { position: relative; cursor: pointer; width: 90%; height: 42px; border: 1px solid #DDD; background-color: #F0F1F3; margin: auto; display: block; border-radius: 10px; margin-top: 0.5rem; }
+.text-container{ margin-left: 0.5rem; margin-top: 0.6rem; font-size: 11pt; position: absolute; color: #808080; } .arrow{ position: absolute; right: 0; margin-right: 10px; color: #808080; top: 0.7rem; }
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #F0F1F3;
+    background-color: #fff;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 10px 10px;
+  }
+  
+  .dropdown-options div {
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+  

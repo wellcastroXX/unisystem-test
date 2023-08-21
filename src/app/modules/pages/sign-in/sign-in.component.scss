@@ -1,0 +1,110 @@
+* {font-family: 'Manrope', sans-serif; }
+
+.content{
+  width: 100%;
+  height: 100%;
+  background-color: #F3F6FD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  width: 75%;
+  height: 92%;
+  border-radius: 20px;
+  background-color: #FFF;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  display: flex;
+}
+
+.left-side {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-side-content{ 
+  width: 100%;
+  height: 95%;
+}
+
+.logo {
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+  margin-left: 14%;
+  margin-top: 2%;
+}
+
+.title{
+  margin-left: 15%;
+  font-size: 20pt;
+  font-weight: 800;
+  margin-top: -5%;
+}
+
+.subtext {
+  margin-left: 15%;
+  margin-top: -5px;
+  color: #555;
+}
+
+.space-between{
+  margin-top: 5%;
+}
+
+.register-now{ 
+  color: #7331D5;
+  font-weight: 700;
+}
+
+.forgot-password{
+  color: #7331D5;
+  font-weight: 500;
+  font-size: 8pt;
+}
+
+.bottom-form {
+  display: flex;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  width: 180px; height: 180px;
+}
+
+video {
+  width: 100%;  
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px 20px 20px 0px;
+}
+
+@media (max-width: 768px) {
+  .card {
+      flex-direction: column;
+  }
+  .left-side,
+  .right-side {
+      width: 100%;
+  }
+}

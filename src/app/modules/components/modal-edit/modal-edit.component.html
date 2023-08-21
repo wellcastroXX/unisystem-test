@@ -1,0 +1,22 @@
+<div class="overlay" *ngIf="isVisible" (click)="closeModal()"></div>
+<div class="right-modal-container" [ngClass]="{ 'show': isVisible }">
+  <div class="header-modal">
+    <div class="title">
+        <img class="icon-title" src="assets/icons/widget.png">
+        <span class="text-title">Atualizar tarefa</span>
+    </div>
+    <button class="close-modal" (click)="closeModal()"><fa-icon class="icon-close" [icon]="faClose"></fa-icon></button>
+    <div class="bar"></div>
+  </div>
+  <div class="modal-content">
+    <app-dropdown [initialValue]="type" (optionSelected)="onOptionSelected($event)"></app-dropdown>
+    <div class="description-field">
+        <label for="description">Descrição:</label>
+        <textarea [(ngModel)]="description" rows="5"></textarea>
+    </div>
+    <div class="modal-footer">
+        <app-button label="Atualizar" color="#7331D5" borderRadius="10px" [isLoading]="isLoading" (click)="updateCard()"></app-button>
+        <app-button label="Cancelar" color="#EA2F2C" borderColor="#EA2F2C" borderRadius="10px" (click)="closeModal()"></app-button>
+    </div>
+  </div>
+</div>

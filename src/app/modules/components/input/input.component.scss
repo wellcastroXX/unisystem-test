@@ -1,0 +1,15 @@
+* {font-family: 'Manrope', sans-serif; }
+.input-container { position: relative; }
+input {  padding: 10px; border: none; border-radius: 5px; width: 65%; margin-top: 15px; margin-bottom: 15px; margin-left: auto; margin-right: auto; display: block; border: 1px #DDD solid; font-weight: 500; &:focus { outline: none; border: 1px #DDD solid; }}
+input.ng-invalid.ng-touched { border-color: red; }
+label {
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold;  
+    text-align: left;
+    position: relative;
+    top: 10px;
+    margin-left: 110px;
+}
+.icon-button { background: none; border: none; padding: 0; margin: 0; cursor: pointer; position: absolute; right: 0; margin-top: -2.7rem; margin-right: 18%; } .eye-icon{ color: #808080; }
+/* position: absolute; right: 0; margin-top: -2.7rem; margin-right: 18%; */

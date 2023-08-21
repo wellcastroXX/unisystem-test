@@ -1,0 +1,20 @@
+* {font-family: 'Manrope', sans-serif; }
+.card-container { width: 92%; border-radius: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #FFFFFF; padding: 15px; margin-top: 12px; position: relative; }
+.badge-type-1 { background-color: #EDF2FE; } .badge-text-type-1{ color: #3C6DF6; margin-top: 10px; font-weight: 600; font-size: 10pt; }
+.badge-type-2 { background-color: #FCEFE2; } .badge-text-type-2{ color: #E6974F; margin-top: 10px; font-weight: 600; font-size: 10pt; }
+.badge-type-3 { background-color: #F0ECFD; } .badge-text-type-3{ color: #7858DF; margin-top: 10px; font-weight: 600; font-size: 10pt; }
+.card-badge { display: inline-block; width: 120px; height: 40px;border-radius: 30px;left: 0; text-align: center; font-size: 12px; margin-right: 10px; }
+.card-description { margin: 10px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.progress-bar { width: 100%; background-color: #e0e0e0; height: 10px; border-radius: 5px; margin: 15px 0; margin-top: 2rem; .progress { background-color: #3498db; height: 100%; border-radius: 5px; }}
+.progress-percent { position: absolute; right: 15px; top: 64%; color: #808080; transform: translateY(-50%); z-index: 1; }
+.card-footer { display: flex; justify-content: flex-end; } .footer-icons { display: flex; gap: 10px; align-items: center; }
+.icon.comment-icon, .icon.attachment-icon { margin-right: 5px; } .icon.comment-icon::before { content: '💬'; } .icon.attachment-icon::before { content: '📎'; }
+.card-menu { position: absolute; right: 10px; top: 10px; display: inline-block; }
+.card-menu-btn { background: none; border: none; font-size: 24px; color: #808080; cursor: pointer; }
+.dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 11; border-radius: 10px; right: 10%; }
+.dropdown-content .icon-menu{ width: 18px; height: 18px; margin-left: 0px; position: absolute; } .edit{ color: #3C6DF6; } .move{ color: #E6974F; } .trash{ color: #e64f4f; }
+.dropdown-content .text-menu{ position: relative; margin-left: 25px; }
+.dropdown-content a { color: #222; padding: 12px 16px; text-decoration: none; display: block; border-radius: 10px; cursor: pointer; }
+.dropdown-content a:hover { background-color: #f1f1f1; }
+.card-menu:hover .dropdown-content { display: block; }
+

@@ -1,0 +1,8 @@
+<div class="overlay" *ngIf="isVisible" (click)="closeModal()"></div>
+<div class="modal-container" *ngIf="isVisible">
+    <p>Deseja realmente deletar essa tarefa?</p>
+    <div class="buttons">
+        <app-button label="Sim" color="#7331D5" borderRadius="10px" (click)="confirm()"></app-button>
+        <app-button label="Não" color="#EA2F2C" borderColor="#EA2F2C" borderRadius="10px" (click)="closeModal()"></app-button>
+    </div>
+</div>

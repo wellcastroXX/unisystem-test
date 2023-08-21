@@ -1,0 +1,124 @@
+* {font-family: 'Manrope', sans-serif; }
+
+.sidenav {
+    width: 8%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #1B0155;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+    transition: width 0.5s ease-in-out;
+}
+
+.sidenav .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidenav .logo img {
+    width: 80px;
+    margin-top: 0.3rem;
+    height: auto;
+}
+
+.menu-item {
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #7331D5;
+    display: flex;           
+    align-items: center;    
+    justify-content: center;  
+    position: relative;    
+    transition: 0.3s;
+    width: 100%;          
+    box-sizing: border-box; 
+    transition: padding-left 0.5s ease-in-out, justify-content 0.5s ease-in-out;
+}
+
+.logout{
+    bottom: 2rem;
+    position: absolute;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    transition: 0.3s;        
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-item .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-item .icon-circle-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #7331D5;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sidenav:hover .menu-item {
+    justify-content: flex-start;
+    padding-left: 30px;         
+    cursor: pointer;
+}
+
+.menu-item .item-text {
+    display: inline-block;
+    opacity: 0;  
+    max-width: 0;
+    margin-top: 0px;
+    font-size: 9pt;
+    margin-left: 0.5rem;
+    color: #F1F1F1;
+    transition: opacity 0.3s ease-in-out, max-width 0.3s ease-in-out 0.2s;
+    transition: opacity 0.3s ease, max-width 0.3s ease 0.2s;
+    white-space: nowrap;
+}
+
+.sidenav:hover .menu-item .icon-circle {
+    transform: translateX(-10px);
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidenav:hover .menu-item .icon-circle-active {
+    transform: translateX(-10px);
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidenav:hover .menu-item .item-text {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, max-width 0.3s ease-in-out 0.2s;
+}
+
+
+.sidenav:hover .item-text {
+    display: inline-block;
+}
+
+.sidenav:hover {
+    width: 12%;
+}
+
+.space-between{
+    margin-top: 2rem;
+}

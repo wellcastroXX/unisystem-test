@@ -1,0 +1,35 @@
+<app-popup #popup (confirmed)="actuallyDeleteCard()"></app-popup>
+<div class="card-container">
+    <div *ngIf="type === 1" class="card-badge" [ngClass]="{'badge-type-1': type === 1}">
+        <p class="badge-text-type-1">{{ cardType }}</p>
+    </div>
+    <div *ngIf="type === 2" class="card-badge" [ngClass]="{'badge-type-2': type === 2}">
+        <p class="badge-text-type-2">{{ cardType }}</p>
+    </div>
+    <div *ngIf="type === 3" class="card-badge" [ngClass]="{'badge-type-3': type === 3}">
+        <p class="badge-text-type-3">{{ cardType }}</p>
+    </div>
+
+    <div class="card-menu">
+        <button class="card-menu-btn">⋮</button>
+        <div class="dropdown-content">
+            <a (click)="requestEdit($event)"><fa-icon class="icon-menu edit" [icon]="faPen"></fa-icon><span class="text-menu">Editar</span></a>
+            <a href="#"><fa-icon class="icon-menu move" [icon]="faArrowsAlt"></fa-icon><span class="text-menu">Mover</span></a>
+            <a (click)="onDeleteCard(id)"><fa-icon class="icon-menu trash" [icon]="faTrash"></fa-icon><span class="text-menu">Deletar</span></a>
+        </div>
+    </div>    
+    
+    <p class="card-description">{{ description }}</p>
+    
+    <div class="progress-bar">
+        <span class="progress-percent">{{ progress }}%</span>
+        <div class="progress" [style.width]="progress + '%'"></div>
+    </div>
+
+    <div class="card-footer">
+        <div class="footer-icons">
+            <span class="icon comment-icon"></span>{{ commentsCount }}
+            <span class="icon attachment-icon"></span>{{ attachmentsCount }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+* {font-family: 'Manrope', sans-serif; }
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 70%;
+  margin-top: 10px;
+  position: relative;
+}
+
+:host {
+  display: block;
+  text-align: center;
+}
+
+.icon {
+  margin-left: -40px; 
+  margin-top: -7.5px;
+  width: 32px; height: 32px;
+  position: absolute;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  width: 14px;
+  height: 14px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  position: absolute;
+  left: 35%
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

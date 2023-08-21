@@ -1,0 +1,84 @@
+<app-sidemenu></app-sidemenu>
+<app-header></app-header>
+<div class="content">
+    <app-modal (saved)="addNewCard($event)" #Modal></app-modal>
+    <app-modal-edit (cardUpdated)="updateCard($event)" [cardData]="selectedCardForEdit" #editModal ></app-modal-edit>
+    <div class="card">
+      <div class="card-content">
+        <div class="card-header">
+            <div class="title">Lista de tarefas</div>
+            <div class="actions">
+              <button class="filter-btn">
+                <img class="icon-filter" src="assets/icons/filter.png">
+              </button>
+              <app-button label="Criar tarefas" borderRadius="30px" color="#7331D5" (click)="Modal.openModal()"></app-button>
+            </div>
+        </div>
+        
+        <div class="card-columns">
+            <div class="column">
+                <div class="column-header">
+                    <span class="title-column">Em espera</span>
+                    <button class="add-btn" (click)="Modal.openModal()">+</button>
+                </div>
+                <ng-container *ngFor="let card of cardData$ | async">
+                    <app-cards 
+                        *ngIf="card.type === 1"
+                        [id]="card.id"
+                        [type]="card.type"
+                        [description]="card.description"
+                        [progress]="card.progress"
+                        [commentsCount]="card.commentsCount"
+                        [attachmentsCount]="card.attachmentsCount"
+                        (editRequested)="handleEditRequest($event)"
+                        (cardDeleted)="removeCard($event)">
+                    </app-cards>
+                </ng-container>
+                <div class="column-cards"></div>
+            </div>
+            
+            <div class="column">
+                <div class="column-header">
+                    <span class="title-column">Em andamento</span>
+                    <button class="add-btn" (click)="Modal.openModal()">+</button>
+                </div>
+                <ng-container *ngFor="let card of cardData$ | async">
+                    <app-cards 
+                        *ngIf="card.type === 2"
+                        [id]="card.id"
+                        [type]="card.type"
+                        [description]="card.description"
+                        [progress]="card.progress"
+                        [commentsCount]="card.commentsCount"
+                        [attachmentsCount]="card.attachmentsCount"
+                        (editRequested)="handleEditRequest($event)"
+                        (cardDeleted)="removeCard($event)">
+                    </app-cards>
+                </ng-container>
+                <div class="column-cards"></div>
+            </div>
+    
+            <div class="column">
+                <div class="column-header">
+                    <span class="title-column">Entregue</span>
+                    <button class="add-btn" (click)="Modal.openModal()">+</button>
+                </div>
+                <ng-container *ngFor="let card of cardData$ | async">
+                    <app-cards 
+                        *ngIf="card.type === 3"
+                        [id]="card.id"
+                        [type]="card.type"
+                        [description]="card.description"
+                        [progress]="card.progress"
+                        [commentsCount]="card.commentsCount"
+                        [attachmentsCount]="card.attachmentsCount"
+                        (editRequested)="handleEditRequest($event)"
+                        (cardDeleted)="removeCard($event)">
+                    </app-cards>
+                </ng-container>
+                <div class="column-cards"></div>
+            </div>
+        </div>
+      </div>
+    </div>    
+</div>

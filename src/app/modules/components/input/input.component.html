@@ -1,0 +1,11 @@
+<div class="input-container">
+    <label [for]="label">{{ label }}</label>
+    <input [formControl]="control" [type]="(type === 'password' && !isPasswordVisible) ? 'password' : 'text'" 
+           [placeholder]="label" 
+           [formControl]="inputControl" 
+           required>
+    <button class="icon-button" *ngIf="type === 'password'" (click)="togglePasswordVisibility()">
+        <fa-icon class="eye-icon" [icon]="isPasswordVisible ? faEye : faEyeSlash"></fa-icon>
+    </button>
+    
+</div>
