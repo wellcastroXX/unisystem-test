@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SignUpComponent } from './sign-up.component';
+import { ButtonComponent } from '../../components/button/button.component';
+import { InputComponent } from '../../components/input/input.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('SignUpComponent', () => {
   let component: SignUpComponent;
@@ -8,7 +12,11 @@ describe('SignUpComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SignUpComponent]
+      declarations: [SignUpComponent, InputComponent, ButtonComponent],
+      imports: [ 
+        FontAwesomeModule,
+        ReactiveFormsModule
+      ]
     });
     fixture = TestBed.createComponent(SignUpComponent);
     component = fixture.componentInstance;

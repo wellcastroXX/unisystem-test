@@ -1,35 +1,32 @@
 <div class="content">
-    <div class="card">
-     <div class="left-side">
-         <div class="left-side-content">
-           <img src="assets/imgs/logotipo.png" alt="Logo" class="logo">
-           <div class="space-between"></div>
-           <h1 class="title">Cadastre-se agora!</h1>
-           <p class="subtext">Já tem conta? <a href="#" class="register-now">Faça login</a></p>
-           <app-input label="Email" type="email" ></app-input>
-           <app-input label="Senha" type="password"></app-input>
-           <app-input label="Confirmar Senha" type="password"></app-input>
-           <div class="bottom-form">
-             <label>
-               <input type="checkbox"> Lembrar senha
-             </label>
-           </div>
-           <div class="space-between"></div>
-           <app-button label="Entrar" color="#7331D5" (click)="onRegister()" [isLoading]="isLoading"></app-button>
-           <app-button 
-             label="Login com Google" 
-             color="#FFFFFF" 
-             borderColor="#DDD" 
-             textColor="#222"
-             icon="assets/icons/g.png">
-         </app-button>
- 
-         </div>
-       </div>
-     <div class="right-side">
-       <video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" class="video">
-         <source src="assets/video/video.mp4" type="video/mp4">
-       </video>
-     </div>
-   </div> 
- </div>
+  <div class="card">
+    <div class="left-side">
+      <div class="left-side-content">
+        <img src="assets/imgs/logotipo.png" alt="Logo" class="logo">
+        <div class="space-between"></div>
+        <h1 class="title">Cadastre-se agora!</h1>
+        <p class="subtext">Já tem conta? <a href="#" class="register-now">Faça login</a></p>
+        <form [formGroup]="loginForm" (ngSubmit)="onRegister()">
+          <app-input formControlName="email" label="Email" type="email"></app-input>
+          <app-input formControlName="password" label="Senha" type="password"></app-input>
+          <app-input formControlName="confirmpassword" label="Confirmar Senha" type="password"></app-input>
+          <div class="bottom-form">
+            <label>
+              <input type="checkbox"> Lembrar senha
+            </label>
+          </div>
+          <div class="space-between"></div>
+          <app-button label="Entrar" color="#7331D5" type="submit" [isLoading]="isLoading"></app-button>
+          <app-button label="Login com Google" color="#FFFFFF" borderColor="#DDD" textColor="#222"
+            icon="assets/icons/g.png">
+          </app-button>
+        </form>
+      </div>
+    </div>
+    <div class="right-side">
+      <video loop muted autoplay oncanplay="this.play()" onloadedmetadata="this.muted = true" class="video">
+        <source src="assets/video/video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
