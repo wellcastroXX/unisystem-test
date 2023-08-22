@@ -19,32 +19,6 @@ export class HomeComponent {
   @ViewChild('editModal') editModal: any;
   cardData$: BehaviorSubject<CardData[]> = new BehaviorSubject<CardData[]>([]);
   selectedCardForEdit: CardData | null = null;
-  /* cardsData: CardData[] = [
-    {
-      id: 0,
-      type: 1,
-      description: "2 Toneladas de Soja para serem carregadas de Miranda-MS para Cascavel-PR",
-      progress: 10,
-      commentsCount: 5,
-      attachmentsCount: 3
-    },
-    {
-      id: 1,
-      type: 2,
-      description: "3 Toneladas de Milho para serem carregadas de Campo Mourão-PR para São Gabriel do Oeste-MS",
-      progress: 40,
-      commentsCount: 2,
-      attachmentsCount: 1
-    },
-    {
-      id: 2,
-      type: 3,
-      description: "1 Tonelada de Algodão para serem carregadas de Curitiba-PR para Bonito-MS",
-      progress: 100,
-      commentsCount: 2,
-      attachmentsCount: 1
-    },
-  ]; */
 
   ngOnInit() {
     const initialCards = [

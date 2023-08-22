@@ -1,27 +1,26 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ModalEditComponent } from './modal-edit.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DropdownComponent } from '../dropdown/dropdown.component';
 import { ButtonComponent } from '../button/button.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputComponent } from './input.component';
 
-describe('ModalEditComponent', () => {
-  let component: ModalEditComponent;
-  let fixture: ComponentFixture<ModalEditComponent>;
+describe('InputComponent', () => {
+  let component: InputComponent;
+  let fixture: ComponentFixture<InputComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        ModalEditComponent, 
-        DropdownComponent, 
-        ButtonComponent
+        InputComponent, 
       ],
       imports: [ 
         FontAwesomeModule,
+        ReactiveFormsModule,
         FormsModule
       ]
     });
-    fixture = TestBed.createComponent(ModalEditComponent);
+    fixture = TestBed.createComponent(InputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

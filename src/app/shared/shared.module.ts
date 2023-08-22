@@ -43,7 +43,8 @@ import { PopupComponent } from '../modules/components/popup/popup.component';
     ModalComponent,
     DropdownComponent,
     ModalEditComponent,
-    PopupComponent
+    PopupComponent,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }

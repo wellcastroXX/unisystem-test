@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DropdownComponent } from './dropdown.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('DropdownComponent', () => {
   let component: DropdownComponent;
@@ -8,7 +9,10 @@ describe('DropdownComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DropdownComponent]
+      declarations: [DropdownComponent],
+      imports: [ 
+        FontAwesomeModule,
+      ]
     });
     fixture = TestBed.createComponent(DropdownComponent);
     component = fixture.componentInstance;
